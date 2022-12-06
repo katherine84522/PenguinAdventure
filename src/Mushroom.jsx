@@ -2,7 +2,7 @@
 
 const Mushroom = ({ expression, rightItem, leftItem, capColor, stemColor, limbsColor }) => {
     return (
-        <div>
+        <div className="mushroom" id="mushroom">
             <div className='righthanditem' style={{ marginTop: '200px' }}>
                 < img src={rightItem} style={{ width: "100px" }} />
             </div>

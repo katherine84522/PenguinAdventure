@@ -1,28 +1,30 @@
 import { useState } from 'react'
 
-const Item = ({ item, rightItem, setRightItem, leftItem, setLeftItem }) => {
+const Item = ({ item, leftItem, rightItem, setRightItem, setLeftItem }) => {
 
     const [showOptions, setShowOptions] = useState(false)
 
     const addToRightHand = (item) => {
-        setRightItem(item)
+        setRightItem(item.image)
         console.log(rightItem)
+        setShowOptions(false)
     }
 
     const addToLeftHand = (item) => {
-        setLeftItem(item)
+        setLeftItem(item.image)
         console.log(leftItem)
+        setShowOptions(false)
     }
 
 
     return (
-        <div style={{ display: 'flex' }} onMouseEnter={() => { setShowOptions(true) }} onMouseLeave={() => { setShowOptions(false) }}>
-            <img src={item.image} style={{ width: '50px' }} />
+        <div style={{ display: 'flex' }}>
+            <img src={item.image} style={{ width: '50px' }} onClick={() => { setShowOptions(!showOptions) }} />
             {
                 showOptions ?
-                    (<div style={{ height: '10px', width: 'auto', position: 'absolute' }}>
-                        <button onClick={() => { addToRightHand(item.image) }}>Right Hand</button>
-                        <button onClick={() => { addToLeftHand(item.image) }}>Left Hand</button>
+                    (<div style={{ height: '10px', width: 'auto', position: 'absolute', zIndex: 100 }}>
+                        <button onClick={() => { addToRightHand(item) }}>Right Hand</button>
+                        <button onClick={() => { addToLeftHand(item) }}>Left Hand</button>
                     </div>)
                     : null
             }

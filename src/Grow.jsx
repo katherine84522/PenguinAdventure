@@ -3,9 +3,10 @@ import { COLORS, EXPRESSIONS, ITEMS } from "./utils";
 import { useNavigate } from "react-router-dom";
 import Mushroom from './Mushroom'
 import Item from './Item'
+// import html2canvas from "html2canvas"
 
 
-function Grow() {
+function Grow({ mushrooms, setMushrooms }) {
 
     const [expression, setExpression] = useState("./src/assets/expressions/1.png")
     const [rightItem, setRightItem] = useState("")
@@ -14,6 +15,7 @@ function Grow() {
     const [capColor, setCapColor] = useState("")
     const [stemColor, setStemColor] = useState("")
     const [limbsColor, setLimbsColor] = useState("")
+
 
 
     const addToFace = (image) => {
@@ -27,7 +29,6 @@ function Grow() {
 
         if (bodyPart === "Cap") {
             setCapColor(color)
-            console.log(capColor)
         };
         if (bodyPart === "Stem") {
             setStemColor(color)
@@ -41,7 +42,42 @@ function Grow() {
 
     const navigate = useNavigate()
 
+    const request = async () => {
+        const req = await fetch("http://localhost:3000/mushrooms", {
+            method: 'POST',
+            body: JSON.stringify({
+                expression,
+                capColor,
+                stemColor,
+                limbsColor,
+                rightItem,
+                leftItem
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        })
+        const res = await req.json()
+        setMushrooms([...mushrooms, res])
+    }
 
+    const sendToKingdom = async () => {
+        // const mushroom = document.getElementById('mushroom')
+        // html2canvas(mushroom).then((canvas) => {
+        //     const mushroomImage = canvas.toDataURL("image/png")
+        //     setMushroomImg([...mushroomImg, mushroomImage])
+        //     console.log(mushroomImg)
+        //     var anchor = document.createElement('a')
+        //     anchor.setAttribute('href', mushroomImage)
+        //     anchor.setAttribute('download', 'my-image.png')
+        //     anchor.click()
+        //     anchor.remove()
+        // })
+
+        await request()
+        navigate('/kingdom')
+    }
 
     return (
         <div>
@@ -66,7 +102,7 @@ function Grow() {
                         })
                     }
                 </div>
-                < Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
+                <Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
                 <div>
                     <button onClick={() => { setBodyPart("Cap") }}>Cap</button>
                     <button onClick={() => { setBodyPart("Stem") }}>Stem</button>
@@ -82,7 +118,7 @@ function Grow() {
                     }
                 </div>
             </div >
-            <button onClick={() => { navigate('/kingdom') }}> Send to Kingdom </button>
+            <button onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>
         </div>
 
     )

@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.mushroom {
+  background-color: transparent;
+}
+
 
 .righthanditem {
   position: absolute;
