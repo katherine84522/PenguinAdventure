@@ -5,49 +5,38 @@
   text-align: center;
 }
 
-.mushroom {
-  background-color: transparent;
-}
+
 
 
 .righthanditem {
   position: absolute;
   margin-top: 200px;
   margin-left: 100px;
+  z-index: auto;
 }
 
 .lefthanditem {
   position: absolute;
   margin-top: 300px;
   margin-left: 600px;
+  z-index: auto;
 }
 
 .expression {
   position: absolute;
   margin-top: 250px;
   margin-left: 280px;
+  z-index: 50;
 }
 
-.limbs {
-  margin-top: 350px;
-  width: 100px;
-  height: 100px;
+.mushroomParts {
+  margin-top: 50px;
+  margin-left: 50px;
+  height: auto;
   position: absolute;
+  z-index: auto;
 }
 
-.stem {
-  margin-top: 150px;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-
-.cap {
-  margin-top: 25px;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
 
 /* .logo {
   height: 6em;

@@ -12,9 +12,9 @@ function Grow({ mushrooms, setMushrooms }) {
     const [rightItem, setRightItem] = useState("")
     const [leftItem, setLeftItem] = useState("")
     const [bodyPart, setBodyPart] = useState("")
-    const [capColor, setCapColor] = useState("")
-    const [stemColor, setStemColor] = useState("")
-    const [limbsColor, setLimbsColor] = useState("")
+    const [capColor, setCapColor] = useState("./src/assets/MushroomParts/Cap/FB310E.png")
+    const [stemColor, setStemColor] = useState("./src/assets/MushroomParts/Body/D8E2DC.png")
+    const [limbsColor, setLimbsColor] = useState("./src/assets/MushroomParts/Limbs/FB310E.png")
 
 
 
@@ -28,13 +28,14 @@ function Grow({ mushrooms, setMushrooms }) {
 
 
         if (bodyPart === "Cap") {
-            setCapColor(color)
+            setCapColor(color.cap)
+            console.log(capColor)
         };
         if (bodyPart === "Stem") {
-            setStemColor(color)
+            setStemColor(color.stem)
         };
         if (bodyPart === "Limbs") {
-            setLimbsColor(color)
+            setLimbsColor(color.limbs)
         };
 
 
@@ -112,7 +113,7 @@ function Grow({ mushrooms, setMushrooms }) {
                     {
                         COLORS.map((color) => {
                             return (
-                                <div onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color }}> </div>
+                                <div onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color.color }}> </div>
                             )
                         })
                     }

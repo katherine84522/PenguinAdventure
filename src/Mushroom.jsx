@@ -1,5 +1,6 @@
 // import { EXPRESSIONS, ITEMS } from "./utils"
 
+
 const Mushroom = ({ expression, rightItem, leftItem, capColor, stemColor, limbsColor }) => {
     return (
         <div className="mushroom" id="mushroom">
@@ -12,11 +13,14 @@ const Mushroom = ({ expression, rightItem, leftItem, capColor, stemColor, limbsC
             <div className='expression'>
                 <img src={expression} style={{ width: "150px" }} />
             </div>
-            <div className='cap' style={{ background: capColor }} ></div>
-            <div className='stem' style={{ background: stemColor }}></div>
-            <div className='limbs' style={{ background: limbsColor }}></div>
-            <div style={{ textAlign: "center" }}>
-                <img src="https://i.pinimg.com/564x/c2/08/d6/c208d68c482d1aa3ed7585d1c9566972.jpg" style={{ width: '700px' }} />
+            <div className='mushroomParts'>
+                <img src={capColor} style={{ width: "800px" }} />
+            </div>
+            <div className='mushroomParts'>
+                <img src={limbsColor} style={{ width: "800px" }} />
+            </div>
+            <div className='mushroomParts'>
+                <img src={stemColor} style={{ width: "800px" }} />
             </div>
         </div>
     )
