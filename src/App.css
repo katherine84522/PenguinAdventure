@@ -5,7 +5,47 @@
   text-align: center;
 }
 
-.logo {
+
+.righthanditem {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.lefthanditem {
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 600px;
+}
+
+.expression {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 280px;
+}
+
+.limbs {
+  margin-top: 350px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.stem {
+  margin-top: 150px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.cap {
+  margin-top: 25px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -38,4 +78,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
