@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, } from "react";
 import { COLORS, EXPRESSIONS, ITEMS } from "./utils";
 import { useNavigate } from "react-router-dom";
 import Mushroom from './Mushroom'
@@ -83,27 +83,30 @@ function Grow({ mushrooms, setMushrooms }) {
     return (
         <div>
             <div style={{ display: "flex" }}>
-                <div>
+                <div className="grandpa">
+                 <div className="parent">
                     {
                         EXPRESSIONS.map((expression) => {
                             return (
-                                <div>
+                                <div className="child">
                                     <img src={expression.image} style={{ height: '50px' }} onClick={() => { addToFace(expression.image) }} />
                                 </div>
                             );
                         })
                     }
                 </div>
-                <div>
+                <div className="parent">
                     {
                         ITEMS.map((item) => {
                             return (
-                                < Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
+                             <div className="child">
+                                    < Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
+                            </div>
                             )
                         })
                     }
                 </div>
-                <Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
+                    <Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
                 <div>
                     <button onClick={() => { setBodyPart("Cap") }}>Cap</button>
                     <button onClick={() => { setBodyPart("Stem") }}>Stem</button>
@@ -117,6 +120,7 @@ function Grow({ mushrooms, setMushrooms }) {
                             )
                         })
                     }
+                 </div>
                 </div>
             </div >
             <button onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>

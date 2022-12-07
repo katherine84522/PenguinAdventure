@@ -17,40 +17,44 @@ function NavBar() {
             <NavLink
                 to="/"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: "darkgreen",
-                }}
+                // style={linkStyles}
+                // activeStyle={{
+                //     background: "darkgreen",
+                // }}
+                className="btn"
             >
                 Home
             </NavLink>
             <NavLink
                 to="/grow"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: "darkgreen",
-                }}
+                // style={linkStyles}
+                // activeStyle={{
+                //     background: "darkgreen",
+                // }}
+                className="btn"
             >
                 Grow a Mushroom
             </NavLink>
             <NavLink
                 to="/kingdom"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: "darkgreen",
-                }}
+                // style={linkStyles}
+                // activeStyle={{
+                //     background: "darkgreen",
+                // }}
+                className="btn"
             >
                 Mushroom Kingdom
             </NavLink>
             <NavLink
                 to="/cart"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: "darkgreen",
-                }}
+                // style={linkStyles}
+                // activeStyle={{
+                //     background: "darkgreen",
+                // }}
+                className="btn"
             >
                 Cart
             </NavLink>
