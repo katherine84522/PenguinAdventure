@@ -5,27 +5,24 @@
   text-align: center;
 }
 
-
-
-
 .righthanditem {
   position: absolute;
-  margin-top: 200px;
-  margin-left: 100px;
-  z-index: auto;
+  /* margin-top: 200px;
+  margin-left: 250px; */
+  z-index: 25;
 }
 
 .lefthanditem {
   position: absolute;
-  margin-top: 300px;
-  margin-left: 600px;
-  z-index: auto;
+  /* margin-top: 300px;
+  margin-left: 700px; */
+  z-index: 25;
 }
 
 .expression {
   position: absolute;
   margin-top: 250px;
-  margin-left: 280px;
+  margin-left: 400px;
   z-index: 50;
 }
 
@@ -34,7 +31,49 @@
   margin-left: 50px;
   height: auto;
   position: absolute;
-  z-index: auto;
+  z-index: 75;
+}
+
+.styleCard {
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #ccc;
+  color: #253b56;
+  margin: 15px 0px;
+}
+
+.mushroom {
+  z-index: 75;
+}
+
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #fec5bb;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background: #f2988a;
+  text-decoration: none;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(4, 50px);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #ccc;
+  color: #253b56;
+  margin: 15px 0px;
+  height: 200px;
+  /* width: 500px */
+  /* align-items: flex-start; */
 }
 
 .createdMushroom {
@@ -91,6 +130,13 @@
   margin-left: -160px;
   position: absolute;
   z-index: 10;
+}
+
+.child {
+  align-items: flex-start;
+  width: 33%;
+  box-sizing: border-box;
+  justify-content: flex-start;
 }
 
 /* .logo {
