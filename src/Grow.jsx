@@ -74,47 +74,51 @@ function Grow({ mushrooms, setMushrooms }) {
         <div>
             <div style={{ display: "flex" }}>
                 <div className="grandpa">
-                 <div className="parent">
-                    {
-                        EXPRESSIONS.map((expression) => {
-                            return (
-                                <div className="child">
-                                    <img src={expression.image} style={{ height: '50px' }} onClick={() => { addToFace(expression.image) }} />
-                                </div>
-                            );
-                        })
-                    }
-                </div>
-                <div className="parent">
-                    {
-                        ITEMS.map((item) => {
-                            return (
-                             <div className="child">
-                                    < Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
-                            </div>
-                            )
-                        })
-                    }
-                </div>
+                    <div>
+                        <div className="parent">
+                            {
+                                EXPRESSIONS.map((expression) => {
+                                    return (
+                                        <div className="child">
+                                            <img src={expression.image} style={{ height: '50px' }} onClick={() => { addToFace(expression.image) }} />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                        <div className="parent">
+                            {
+                                ITEMS.map((item) => {
+                                    return (
+                                        <div className="child">
+                                            < Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className="colorAndBody" >
+                        <div className="bodyPartButtons">
+                            <button onClick={() => { setBodyPart("Cap") }}>Cap</button>
+                            <button onClick={() => { setBodyPart("Stem") }}>Stem</button>
+                            <button onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
+                        </div>
+                        <div className="colorsButtons" >
+                            {
+                                COLORS.map((color) => {
+                                    return (
+                                        <div onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color.color }}> </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
                     <Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
-                <div>
-                    <button onClick={() => { setBodyPart("Cap") }}>Cap</button>
-                    <button onClick={() => { setBodyPart("Stem") }}>Stem</button>
-                    <button onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
-                </div>
-                <div >
-                    {
-                        COLORS.map((color) => {
-                            return (
-                                <div onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color.color }}> </div>
-                            )
-                        })
-                    }
-                 </div>
                 </div>
 
             </div >
-            <button onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>
+            <button style={{ marginTop: '400px' }} onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>
         </div>
 
     )

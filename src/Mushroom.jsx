@@ -4,10 +4,10 @@
 const Mushroom = ({ expression, rightItem, leftItem, capColor, stemColor, limbsColor }) => {
     return (
         <div className="mushroom" id="mushroom">
-            <div className='righthanditem' style={{ marginTop: '200px', marginLeft: '200px' }}>
+            <div className='righthanditem' style={{ marginTop: '200px' }}>
                 < img src={rightItem} style={{ width: "100px" }} />
             </div>
-            <div className='lefthanditem' style={{ marginTop: '200px', marginLeft: '625px' }}>
+            <div className='lefthanditem' style={{ marginTop: '200px', marginLeft: '500px' }}>
                 < img src={leftItem} style={{ width: "100px" }} />
             </div>
             <div className='expression'>
