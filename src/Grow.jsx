@@ -43,40 +43,30 @@ function Grow({ mushrooms, setMushrooms }) {
 
     const navigate = useNavigate()
 
-    const request = async () => {
-        const req = await fetch("http://localhost:3000/mushrooms", {
-            method: 'POST',
-            body: JSON.stringify({
-                expression,
-                capColor,
-                stemColor,
-                limbsColor,
-                rightItem,
-                leftItem
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            }
-        })
-        const res = await req.json()
-        setMushrooms([...mushrooms, res])
-    }
 
-    const sendToKingdom = async () => {
-        // const mushroom = document.getElementById('mushroom')
-        // html2canvas(mushroom).then((canvas) => {
-        //     const mushroomImage = canvas.toDataURL("image/png")
-        //     setMushroomImg([...mushroomImg, mushroomImage])
-        //     console.log(mushroomImg)
-        //     var anchor = document.createElement('a')
-        //     anchor.setAttribute('href', mushroomImage)
-        //     anchor.setAttribute('download', 'my-image.png')
-        //     anchor.click()
-        //     anchor.remove()
-        // })
+    const sendToKingdom = () => {
 
-        await request()
+        const request = async () => {
+            const req = await fetch("http://localhost:3000/mushrooms", {
+                method: 'POST',
+                body: JSON.stringify({
+                    expression,
+                    capColor,
+                    stemColor,
+                    limbsColor,
+                    rightItem,
+                    leftItem
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            })
+            const res = await req.json()
+            setMushrooms([...mushrooms, res])
+        }
+
+        request()
         navigate('/kingdom')
     }
 
@@ -118,6 +108,7 @@ function Grow({ mushrooms, setMushrooms }) {
                         })
                     }
                 </div>
+
             </div >
             <button onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>
         </div>

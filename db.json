@@ -1,13 +1,31 @@
 {
-    "mushrooms": [
-        {
-            "expression": "./src/assets/expressions/1.png",
-            "capColor": "./src/assets/MushroomParts/Cap/FB310E.png",
-            "stemColor": "./src/assets/MushroomParts/Body/D8E2DC.png",
-            "limbsColor": "./src/assets/MushroomParts/Limbs/FB310E.png",
-            "rightItem": "./src/assets/items/cupcake.png",
-            "leftItem": "./src/assets/items/flowers.png",
-            "id": 3
-        }
-    ]
+  "mushrooms": [
+    {
+      "expression": "./src/assets/expressions/1.png",
+      "capColor": "./src/assets/MushroomParts/Cap/FB310E.png",
+      "stemColor": "./src/assets/MushroomParts/Body/D8E2DC.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/FB310E.png",
+      "rightItem": "./src/assets/items/cupcake.png",
+      "leftItem": "./src/assets/items/flowers.png",
+      "id": 3
+    },
+    {
+      "expression": "./src/assets/expressions/7.png",
+      "capColor": "./src/assets/MushroomParts/Cap/FB310E.png",
+      "stemColor": "./src/assets/MushroomParts/Body/D8E2DC.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/FB310E.png",
+      "rightItem": "./src/assets/items/laptop.png",
+      "leftItem": "./src/assets/items/slingshot.png",
+      "id": 4
+    },
+    {
+      "expression": "./src/assets/expressions/10.png",
+      "capColor": "./src/assets/MushroomParts/Cap/FB310E.png",
+      "stemColor": "./src/assets/MushroomParts/Body/D8E2DC.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/FB310E.png",
+      "rightItem": "./src/assets/items/flowers.png",
+      "leftItem": "./src/assets/items/waterbottle.png",
+      "id": 5
+    }
+  ]
 }

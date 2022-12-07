@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/grow" element={<Grow mushrooms={mushrooms} setMushrooms={setMushrooms} />} />
-        <Route path="/kingdom" element={<Kingdom mushrooms={mushrooms} />} />
+        <Route path="/kingdom" element={<Kingdom mushrooms={mushrooms} setMushrooms={setMushrooms} />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
