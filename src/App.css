@@ -194,11 +194,23 @@
 }
 
 
+
 .btn:hover {
   background: #b86154;
   text-decoration: none;
 }
+/* .btn .active{
+    background: #fec5bb;
+} */
 
+.bootstrap-killer{
+   background: #fec5bb !important;
+   border: none !important; 
+}
+.bootstrap-killer:hover{
+  background: #b86154 !important;
+  text-decoration: none !important; 
+}
 .locationButton {
   border-radius: 8px;
   color: #ffffff;
@@ -393,3 +405,6 @@
   font-style: normal;
 
 }
+/* .active{
+  border: 10px solid red;
+} */
