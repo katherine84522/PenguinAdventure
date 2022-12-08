@@ -75,7 +75,7 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
                 <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/northpole.jpg'); setWelcomeMsg("the North Pole") }}>North Pole</button>
                 <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/mountrushmore.jpg'); setWelcomeMsg("Mount Rushmore") }}>Mount Rushmore</button>
             </div>
-            <div id='kingdom' style={{ padding: '0px' }}>
+            <div id='kingdom' className='adventurePhoto'>
                 <div style={{ display: 'flex' }}>
                     {
                         mushrooms.map((mushroom) => {
@@ -85,7 +85,7 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
                         })
                     }
                 </div>
-                <img src={backgroundImg} style={{ zIndex: 0, height: 'auto', width: '100%' }} />
+                <img src={backgroundImg} className='backgroundImg' />
             </div>
             <button className="locationButton" onClick={() => { downloadImg() }} style={{ marginLeft: '45%' }}> Take a Photo</button>
             <div style={{ display: 'flex', gap: '12em', justifyContent: 'center' }}>

@@ -21,24 +21,14 @@
   ],
   "cartItems": [
     {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fec89a.png",
-      "stemColor": "./src/assets/MushroomParts/Body/577563.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fec5bb.png",
-      "rightItem": "./src/assets/items/cupcake.png",
-      "leftItem": "./src/assets/items/sword.png",
-      "id": 4,
-      "checked": true
-    },
-    {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/ffe5d9.png",
+      "expression": "./src/assets/expressions/2.png",
+      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
       "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fec89a.png",
-      "rightItem": "./src/assets/items/icecream.png",
-      "leftItem": "",
-      "checked": false,
-      "id": 5
+      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
+      "rightItem": "./src/assets/items/flowers.png",
+      "leftItem": "./src/assets/items/gun.png",
+      "checked": true,
+      "id": 6
     }
   ]
 }

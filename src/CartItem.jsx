@@ -1,6 +1,6 @@
 
 
-const CartItem = ({ item, handleCheck }) => {
+const CartItem = ({ item, handleCheck, handleRemove }) => {
 
 
 
@@ -30,7 +30,7 @@ const CartItem = ({ item, handleCheck }) => {
                 <input className='checkbox' type='checkbox' defaultChecked />
                 <label className='checkBoxLabel' >Take me home</label>
             </form>
-            <button className='removeBtn'>Release me</button>
+            <button onClick={() => { handleRemove(item) }} className='removeBtn'>Release me</button>
         </div>
     )
 }

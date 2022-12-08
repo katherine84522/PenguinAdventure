@@ -47,6 +47,19 @@ function Cart({ cartItems, setCartItems }) {
     }
 
 
+    const handleRemove = async (item) => {
+        const req = await fetch(`http://localhost:3000/cartItems/${item.id}`, {
+            method: "DELETE"
+        })
+        setCartItems((prevState) => {
+            return [...prevState.filter(mushObject => mushObject.id !== item.id)]
+        })
+        setItemQuantity(itemQuantity - 1)
+
+    }
+
+
+
 
 
     return (
@@ -55,16 +68,16 @@ function Cart({ cartItems, setCartItems }) {
                 {
                     cartItems.map((item) => {
                         return (
-                            <CartItem item={item} setItemQuantity={setItemQuantity} itemQuantity={itemQuantity} handleCheck={handleCheck} />
+                            <CartItem item={item} setItemQuantity={setItemQuantity} itemQuantity={itemQuantity} handleCheck={handleCheck} handleRemove={handleRemove} />
                         )
                     })
                 }
 
             </div>
             <div className="checkOutContainer">
-                <h3>Subtotal</h3>
-                <h4>{itemQuantity} Mushroom{itemQuantity > 1 ? "s" : null}</h4>
-                <h3>$ {itemQuantity * 17500} USD</h3>
+                <h3 className='checkOutText' >Subtotal</h3>
+                <h4 className='checkOutText'>{itemQuantity} Mushroom{itemQuantity > 1 ? "s" : null}</h4>
+                <h3 className='checkOutText'>$ {itemQuantity * 17500} USD</h3>
                 <button className="checkoutBtn" onClick={() => { alert('You just got scammed!') }}>Continue to Checkout</button>
             </div>
         </div>
