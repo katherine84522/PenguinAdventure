@@ -12,9 +12,9 @@ function Grow({ mushrooms, setMushrooms }) {
     const [rightItem, setRightItem] = useState("")
     const [leftItem, setLeftItem] = useState("")
     const [bodyPart, setBodyPart] = useState("")
-    const [capColor, setCapColor] = useState("./src/assets/MushroomParts/Cap/FB310E.png")
-    const [stemColor, setStemColor] = useState("./src/assets/MushroomParts/Body/D8E2DC.png")
-    const [limbsColor, setLimbsColor] = useState("./src/assets/MushroomParts/Limbs/FB310E.png")
+    const [capColor, setCapColor] = useState("./src/assets/MushroomParts/Cap/fb310e.png")
+    const [stemColor, setStemColor] = useState("./src/assets/MushroomParts/Body/d8e2dc.png")
+    const [limbsColor, setLimbsColor] = useState("./src/assets/MushroomParts/Limbs/fb310e.png")
 
 
 

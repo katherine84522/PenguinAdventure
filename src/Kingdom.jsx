@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import CreatedMushroom from "./CreatedMushroom";
 import html2canvas from "html2canvas";
 import MushroomCard from './MushroomCard'
 
 
-function Kingdom({ mushrooms, setMushrooms }) {
+function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
 
     const [backgroundImg, setBackgroundImg] = useState('./src/assets/kingdomImg.jpg')
     const [welcomeMsg, setWelcomeMsg] = useState("Mushroom Kingdom")
@@ -36,6 +37,12 @@ function Kingdom({ mushrooms, setMushrooms }) {
     }, [])
 
 
+    const navigate = useNavigate()
+    const handleAbduct = (mushroom) => {
+        setCartItems([...cartItems, mushroom])
+        navigate('/Cart')
+    }
+
 
     return (
         <div>
@@ -62,7 +69,7 @@ function Kingdom({ mushrooms, setMushrooms }) {
                 {
                     mushrooms.map((mushroom) => {
                         return (
-                            <MushroomCard mushroom={mushroom} />
+                            <MushroomCard mushroom={mushroom} setMushrooms={setMushrooms} cartItems={cartItems} setCartItems={setCartItems} handleAbduct={handleAbduct} />
                         )
                     })
                 }

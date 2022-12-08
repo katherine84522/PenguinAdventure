@@ -10,6 +10,7 @@ import './App.css'
 function App() {
 
   const [mushrooms, setMushrooms] = useState([])
+  const [cartItems, setCartItems] = useState([])
 
   return (
     <div>
@@ -17,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/grow" element={<Grow mushrooms={mushrooms} setMushrooms={setMushrooms} />} />
-        <Route path="/kingdom" element={<Kingdom mushrooms={mushrooms} setMushrooms={setMushrooms} />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/kingdom" element={<Kingdom mushrooms={mushrooms} setMushrooms={setMushrooms} cartItems={cartItems} setCartItems={setCartItems} />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} />} />
       </Routes>
     </div>
   );

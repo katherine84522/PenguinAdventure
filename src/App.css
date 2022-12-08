@@ -22,7 +22,7 @@
 .expression {
   position: absolute;
   margin-top: 250px;
-  margin-left: 400px;
+  margin-left: 393px;
   z-index: 50;
 }
 
@@ -31,7 +31,7 @@
   margin-left: 50px;
   height: auto;
   position: absolute;
-  z-index: 75;
+  z-index: 0;
 }
 
 .styleCard {
@@ -42,7 +42,7 @@
 }
 
 .mushroom {
-  z-index: 75;
+  z-index: 0;
   margin-left: -100px;
 }
 
@@ -80,7 +80,10 @@
   box-sizing: border-box;
   justify-content: flex-start;
   margin-top: 100px;
-  position: absolute
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(5, 50px);
 }
 
 
@@ -112,6 +115,8 @@
   margin: 15px 0px;
   height: 200px;
   margin-top: 100px;
+  z-index: 100;
+
   /* width: 500px */
   /* align-items: flex-start; */
 }
@@ -130,7 +135,7 @@
   margin-top: 370px;
   margin-left: 230px;
   position: absolute;
-  z-index: 20;
+  z-index: 120;
 }
 
 .mushroomRightItem {
@@ -180,6 +185,7 @@
   width: 33%;
   box-sizing: border-box;
   justify-content: flex-start;
+  z-index: 200;
 }
 
 /* .logo {
