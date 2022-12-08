@@ -19,15 +19,17 @@ const Item = ({ item, leftItem, rightItem, setRightItem, setLeftItem }) => {
 
     return (
         <div style={{ display: 'flex' }}>
-            <img src={item.image} style={{ width: '40px', height: '40px'}} onClick={() => { setShowOptions(!showOptions) }} />
+            <img src={item.image} style={{ width: '40px', height: '40px', zIndex: '220' }} onClick={() => { setShowOptions(!showOptions) }} />
+
             {
                 showOptions ?
-                    (<div style={{ height: '10px', width: 'auto', position: 'absolute', zIndex: 100 }}>
+                    (<div style={{ height: '10px', width: 'auto', position: 'absolute', zIndex: '300' }}>
                         <button onClick={() => { addToRightHand(item) }}>Right Hand</button>
                         <button onClick={() => { addToLeftHand(item) }}>Left Hand</button>
                     </div>)
                     : null
             }
+
         </div>
     )
 

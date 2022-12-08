@@ -1,7 +1,20 @@
 // import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
-const MushroomCard = ({ mushroom }) => {
+const MushroomCard = ({ mushroom, setMushrooms, cartItems, setCartItems, handleAbduct }) => {
+
+    const eatMushroom = async () => {
+        let req = await fetch(`http://localhost:3000/mushrooms/${mushroom.id}`, {
+            method: 'DELETE'
+        })
+        setMushrooms((prevState) => {
+            return [...prevState.filter(mushObject => mushObject.id !== mushroom.id)]
+        })
+    }
+
+
+
 
 
     return (
@@ -26,10 +39,10 @@ const MushroomCard = ({ mushroom }) => {
                 <img src={mushroom.limbsColor} style={{ width: "300px" }} />
             </div>
             <div style={{ marginTop: '250px', marginLeft: '-50px' }}>
-                <button >Eat</button>
-                <button style={{ marginLeft: '1em' }}>Abduct</button>
+                <button onClick={() => { eatMushroom(mushroom) }} >Eat</button>
+                <button onClick={() => { handleAbduct(mushroom) }} style={{ marginLeft: '1em' }}>Abduct</button>
             </div>
-        </div>
+        </div >
 
     )
 }
