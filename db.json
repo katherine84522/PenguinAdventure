@@ -17,6 +17,15 @@
       "rightItem": "./src/assets/items/flowers.png",
       "leftItem": "./src/assets/items/gun.png",
       "id": 6
+    },
+    {
+      "expression": "./src/assets/expressions/1.png",
+      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
+      "stemColor": "./src/assets/MushroomParts/Body/ffe5d9.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
+      "rightItem": "",
+      "leftItem": "",
+      "id": 7
     }
   ],
   "cartItems": [

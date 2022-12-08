@@ -5,6 +5,7 @@ import Grow from "./Grow";
 import Kingdom from "./Kingdom";
 import NavBar from "./NavBar";
 import Cart from "./Cart";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {

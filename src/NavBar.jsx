@@ -25,7 +25,7 @@ function NavBar() {
                     // activeStyle={{
                     //     background: "darkgreen",
                     // }}
-                    className="btn"
+                    className="btn bootstrap-killer"
                 >
                     Home
                 </NavLink>
@@ -36,7 +36,7 @@ function NavBar() {
                     // activeStyle={{
                     //     background: "darkgreen",
                     // }}
-                    className="btn"
+                    className="btn bootstrap-killer"
                 >
                     Grow a Mushroom
                 </NavLink>
@@ -47,7 +47,7 @@ function NavBar() {
                     // activeStyle={{
                     //     background: "darkgreen",
                     // }}
-                    className="btn"
+                    className="btn bootstrap-killer"
                 >
                     Adventure
                 </NavLink>
@@ -58,7 +58,7 @@ function NavBar() {
                     // activeStyle={{
                     //     background: "darkgreen",
                     // }}
-                    className="btn"
+                    className="btn bootstrap-killer"
                 >
                     Cart
                 </NavLink>
