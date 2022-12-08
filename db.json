@@ -1,31 +1,22 @@
 {
   "mushrooms": [
     {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fec89a.png",
+      "expression": "./src/assets/expressions/9.png",
+      "capColor": "./src/assets/MushroomParts/Cap/fcd5ce.png",
       "stemColor": "./src/assets/MushroomParts/Body/577563.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fec5bb.png",
-      "rightItem": "./src/assets/items/cupcake.png",
-      "leftItem": "./src/assets/items/sword.png",
-      "id": 4
+      "limbsColor": "./src/assets/MushroomParts/Limbs/e8e8e4.png",
+      "rightItem": "./src/assets/items/balloon.png",
+      "leftItem": "./src/assets/items/waterbottle.png",
+      "id": 3
     },
     {
-      "expression": "./src/assets/expressions/2.png",
+      "expression": "./src/assets/expressions/3.png",
       "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
+      "stemColor": "./src/assets/MushroomParts/Body/fec89a.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/577563.png",
       "rightItem": "./src/assets/items/flowers.png",
-      "leftItem": "./src/assets/items/gun.png",
-      "id": 6
-    },
-    {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/ffe5d9.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
-      "rightItem": "",
-      "leftItem": "",
-      "id": 7
+      "leftItem": "./src/assets/items/laptop.png",
+      "id": 4
     }
   ],
   "cartItems": [
@@ -48,6 +39,16 @@
       "leftItem": "./src/assets/items/gun.png",
       "checked": true,
       "id": 7
+    },
+    {
+      "expression": "./src/assets/expressions/2.png",
+      "capColor": "./src/assets/MushroomParts/Cap/e8e8e4.png",
+      "stemColor": "./src/assets/MushroomParts/Body/fec5bb.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/577563.png",
+      "rightItem": "./src/assets/items/laptop.png",
+      "leftItem": "./src/assets/items/hammer.png",
+      "checked": true,
+      "id": 8
     }
   ]
 }
