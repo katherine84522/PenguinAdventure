@@ -59,7 +59,7 @@ function Grow({ mushrooms, setMushrooms }) {
                 }),
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 }
             })
             const res = await req.json()
@@ -91,7 +91,7 @@ function Grow({ mushrooms, setMushrooms }) {
                                 ITEMS.map((item) => {
                                     return (
                                         <div className="child">
-                                            < Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
+                                            <Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
                                         </div>
                                     )
                                 })

@@ -5,6 +5,29 @@
   text-align: center;
 }
 
+
+/* * {
+  box-sizing: border-box
+} */
+
+.navbar {
+  background-color: #d8e2dc;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+  z-index: 4
+}
+
+.headerImg {
+  position: absolute;
+  z-index: 10;
+  height: 100px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .righthanditem {
   position: absolute;
   /* margin-top: 200px;
@@ -180,12 +203,99 @@
   z-index: 10;
 }
 
+.cartExpression {
+  margin-top: 112px;
+  margin-left: 120px;
+  position: absolute;
+  z-index: 20;
+}
+
+.cartRightItem {
+  margin-top: 72px;
+  margin-left: 43px;
+  position: absolute;
+  z-index: 30;
+  height: 70px;
+}
+
+.cartLeftItem {
+  margin-top: 72px;
+  margin-left: 200px;
+  position: absolute;
+  z-index: 30;
+}
+
+.cartMushroom {
+  margin-top: 42px;
+  margin-left: -10px;
+  position: absolute;
+  z-index: 10;
+}
+
+.cartItem {
+  margin-left: 0px;
+  height: 250px;
+  width: 600px;
+  border: 4px dashed rgb(172, 233, 235);
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px #ccc;
+}
+
+.cartItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 70px;
+}
+
+.checkbox {
+  margin-top: 100px;
+  margin-left: 300px;
+  width: 20px;
+  height: 20px;
+}
+
+.checkBoxLabel {
+  font-family: sans-serif;
+}
+
+.checkOutContainer {
+  border: 4px solid rgb(253, 207, 106);
+  width: 200px;
+  height: 250px;
+  margin-top: 70px;
+  margin-left: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px #ccc;
+}
+
+.checkoutBtn {
+  border: none;
+  background-color: rgb(211, 79, 2);
+  border-radius: 4px;
+  color: white;
+  margin-top: 40px;
+  height: 25px;
+}
+
+.removeBtn {
+  background-color: rgb(83, 131, 128);
+  margin-top: 20px;
+  margin-left: 300px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+  width: 90px;
+
+}
+
+
 .child {
   align-items: flex-start;
   width: 33%;
   box-sizing: border-box;
   justify-content: flex-start;
-  z-index: 200;
 }
 
 /* .logo {

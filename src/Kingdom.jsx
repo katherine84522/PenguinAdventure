@@ -38,8 +38,31 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
 
 
     const navigate = useNavigate()
-    const handleAbduct = (mushroom) => {
-        setCartItems([...cartItems, mushroom])
+
+    const handleAbduct = async (mushroom) => {
+
+        const req = await fetch("http://localhost:3000/cartItems", {
+            method: "POST",
+            body: JSON.stringify({
+                expression: mushroom.expression,
+                capColor: mushroom.capColor,
+                stemColor: mushroom.stemColor,
+                limbsColor: mushroom.limbsColor,
+                rightItem: mushroom.rightItem,
+                leftItem: mushroom.leftItem,
+                checked: true,
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+
+        })
+        const res = await req.json()
+
+
+        setCartItems([...cartItems, res])
+        console.log(cartItems)
         navigate('/Cart')
     }
 

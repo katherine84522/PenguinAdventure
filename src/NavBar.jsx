@@ -1,64 +1,69 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const linkStyles = {
-    display: "inline-block",
-    width: "50px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "pink",
-    textDecoration: "none",
-    color: "white",
-};
+// const linkStyles = {
+//     display: "inline-block",
+//     width: "50px",
+//     padding: "12px",
+//     margin: "0 6px 6px",
+//     background: "pink",
+//     textDecoration: "none",
+//     color: "white",
+// };
 
 function NavBar() {
     return (
-        <div>
-            <NavLink
-                to="/"
-                exact
-                // style={linkStyles}
-                // activeStyle={{
-                //     background: "darkgreen",
-                // }}
-                className="btn"
-            >
-                Home
-            </NavLink>
-            <NavLink
-                to="/grow"
-                exact
-                // style={linkStyles}
-                // activeStyle={{
-                //     background: "darkgreen",
-                // }}
-                className="btn"
-            >
-                Grow a Mushroom
-            </NavLink>
-            <NavLink
-                to="/kingdom"
-                exact
-                // style={linkStyles}
-                // activeStyle={{
-                //     background: "darkgreen",
-                // }}
-                className="btn"
-            >
-                Mushroom Kingdom
-            </NavLink>
-            <NavLink
-                to="/cart"
-                exact
-                // style={linkStyles}
-                // activeStyle={{
-                //     background: "darkgreen",
-                // }}
-                className="btn"
-            >
-                Cart
-            </NavLink>
-        </div>
+        <header>
+            <nav className='navbar'>
+                <img className="headerImg" src='./src/assets/headerRED1.png' />
+                <div>
+                    <NavLink
+                        to="/"
+                        exact
+                        // style={linkStyles}
+                        // activeStyle={{
+                        //     background: "darkgreen",
+                        // }}
+                        className="btn"
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to="/grow"
+                        exact
+                        // style={linkStyles}
+                        // activeStyle={{
+                        //     background: "darkgreen",
+                        // }}
+                        className="btn"
+                    >
+                        Grow a Mushroom
+                    </NavLink>
+                    <NavLink
+                        to="/adventure"
+                        exact
+                        // style={linkStyles}
+                        // activeStyle={{
+                        //     background: "darkgreen",
+                        // }}
+                        className="btn"
+                    >
+                        Adventure
+                    </NavLink>
+                    <NavLink
+                        to="/cart"
+                        exact
+                        // style={linkStyles}
+                        // activeStyle={{
+                        //     background: "darkgreen",
+                        // }}
+                        className="btn"
+                    >
+                        Cart
+                    </NavLink>
+                </div>
+            </nav>
+        </header>
     );
 }
 

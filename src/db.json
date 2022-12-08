@@ -1,9 +1,0 @@
-[
-    {
-        "expression": "./src/assets/expressions/1.png",
-        "capColor": "#FEC5BB",
-        "stemColor": "#FCD5CE",
-        "limbsColor": "#FAE1DD",
-        "rightItem": "./src/assets/items/sword.png",
-        "leftItem": "./src/assets/items/balloon.png"
-    }
