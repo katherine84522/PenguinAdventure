@@ -18,7 +18,7 @@ const Item = ({ item, leftItem, rightItem, setRightItem, setLeftItem }) => {
 
 
     return (
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', marginLeft: '10px' }}>
             <img src={item.image} style={{ width: '40px', height: '40px', zIndex: '220' }} onClick={() => { setShowOptions(!showOptions) }} />
 
             {

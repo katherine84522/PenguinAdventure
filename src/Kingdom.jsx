@@ -69,11 +69,11 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
 
     return (
         <div>
-            <h1>Welcome to {welcomeMsg}!</h1>
+            <h1 className="adventureHeader">Welcome to {welcomeMsg}!</h1>
             <div style={{ display: 'flex', gap: '1em', justifyContent: 'center' }}>
-                <button onClick={() => { setBackgroundImg('./src/assets/kingdomImg.jpg'); setWelcomeMsg("Mushroom Kingdom") }}>Mushroom Kingdom</button>
-                <button onClick={() => { setBackgroundImg('./src/assets/northpole.jpg'); setWelcomeMsg("the North Pole") }}>North Pole</button>
-                <button onClick={() => { setBackgroundImg('./src/assets/mountrushmore.jpg'); setWelcomeMsg("Mount Rushmore") }}>Mount Rushmore</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/kingdomImg.jpg'); setWelcomeMsg("Mushroom Kingdom") }}>Mushroom Kingdom</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/northpole.jpg'); setWelcomeMsg("the North Pole") }}>North Pole</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/mountrushmore.jpg'); setWelcomeMsg("Mount Rushmore") }}>Mount Rushmore</button>
             </div>
             <div id='kingdom' style={{ padding: '0px' }}>
                 <div style={{ display: 'flex' }}>
@@ -87,7 +87,7 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
                 </div>
                 <img src={backgroundImg} style={{ zIndex: 0, height: 'auto', width: '100%' }} />
             </div>
-            <button onClick={() => { downloadImg() }}> Take a Photo</button>
+            <button className="locationButton" onClick={() => { downloadImg() }} style={{ marginLeft: '45%' }}> Take a Photo</button>
             <div style={{ display: 'flex', gap: '12em', justifyContent: 'center' }}>
                 {
                     mushrooms.map((mushroom) => {

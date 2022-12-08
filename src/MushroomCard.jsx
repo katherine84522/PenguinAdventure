@@ -38,8 +38,8 @@ const MushroomCard = ({ mushroom, setMushrooms, cartItems, setCartItems, handleA
                 <img src={mushroom.limbsColor} style={{ width: "300px" }} />
             </div>
             <div style={{ marginTop: '250px', marginLeft: '-50px' }}>
-                <button onClick={() => { eatMushroom(mushroom) }} >Eat</button>
-                <button onClick={() => { handleAbduct(mushroom) }} style={{ marginLeft: '1em' }}>Abduct</button>
+                <button className="bodyPartButton" onClick={() => { eatMushroom(mushroom) }} >Eat</button>
+                <button className="bodyPartButton" onClick={() => { handleAbduct(mushroom) }} style={{ marginLeft: '1em' }}>Abduct</button>
             </div>
         </div >
 

@@ -13,57 +13,57 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
     return (
-        <header>
-            <nav className='navbar'>
-                <img className="headerImg" src='./src/assets/headerRED1.png' />
-                <div>
-                    <NavLink
-                        to="/"
-                        exact
-                        // style={linkStyles}
-                        // activeStyle={{
-                        //     background: "darkgreen",
-                        // }}
-                        className="btn"
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to="/grow"
-                        exact
-                        // style={linkStyles}
-                        // activeStyle={{
-                        //     background: "darkgreen",
-                        // }}
-                        className="btn"
-                    >
-                        Grow a Mushroom
-                    </NavLink>
-                    <NavLink
-                        to="/adventure"
-                        exact
-                        // style={linkStyles}
-                        // activeStyle={{
-                        //     background: "darkgreen",
-                        // }}
-                        className="btn"
-                    >
-                        Adventure
-                    </NavLink>
-                    <NavLink
-                        to="/cart"
-                        exact
-                        // style={linkStyles}
-                        // activeStyle={{
-                        //     background: "darkgreen",
-                        // }}
-                        className="btn"
-                    >
-                        Cart
-                    </NavLink>
-                </div>
-            </nav>
-        </header>
+        <div className='navbar'>
+            <div className="headerImg">
+                <img className="logoImg" src='./src/assets/headerRED1.png' />
+            </div>
+            <div className='navButtons'>
+                <NavLink
+                    to="/"
+                    exact
+                    // style={linkStyles}
+                    // activeStyle={{
+                    //     background: "darkgreen",
+                    // }}
+                    className="btn"
+                >
+                    Home
+                </NavLink>
+                <NavLink
+                    to="/grow"
+                    exact
+                    // style={linkStyles}
+                    // activeStyle={{
+                    //     background: "darkgreen",
+                    // }}
+                    className="btn"
+                >
+                    Grow a Mushroom
+                </NavLink>
+                <NavLink
+                    to="/adventure"
+                    exact
+                    // style={linkStyles}
+                    // activeStyle={{
+                    //     background: "darkgreen",
+                    // }}
+                    className="btn"
+                >
+                    Adventure
+                </NavLink>
+                <NavLink
+                    to="/cart"
+                    exact
+                    // style={linkStyles}
+                    // activeStyle={{
+                    //     background: "darkgreen",
+                    // }}
+                    className="btn"
+                >
+                    Cart
+                </NavLink>
+            </div>
+        </div>
     );
 }
 

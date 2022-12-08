@@ -67,7 +67,7 @@ function Grow({ mushrooms, setMushrooms }) {
         }
 
         request()
-        navigate('/kingdom')
+        navigate('/adventure')
     }
 
     return (
@@ -79,14 +79,14 @@ function Grow({ mushrooms, setMushrooms }) {
                             {
                                 EXPRESSIONS.map((expression) => {
                                     return (
-                                        <div className="child">
+                                        <div className="child" style={{ zIndex: '100' }} >
                                             <img src={expression.image} style={{ height: '50px' }} onClick={() => { addToFace(expression.image) }} />
                                         </div>
                                     );
                                 })
                             }
                         </div>
-                        <div className="parent">
+                        <div className="parent" style={{ marginTop: '50px' }}>
                             {
                                 ITEMS.map((item) => {
                                     return (
@@ -100,15 +100,15 @@ function Grow({ mushrooms, setMushrooms }) {
                     </div>
                     <div className="colorAndBody" >
                         <div className="bodyPartButtons">
-                            <button onClick={() => { setBodyPart("Cap") }}>Cap</button>
-                            <button onClick={() => { setBodyPart("Stem") }}>Stem</button>
-                            <button onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
+                            <button className="bodyPartButton" onClick={() => { setBodyPart("Cap") }}>Cap</button>
+                            <button className="bodyPartButton" onClick={() => { setBodyPart("Stem") }}>Stem</button>
+                            <button className="bodyPartButton" onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
                         </div>
                         <div className="colorsButtons" >
                             {
                                 COLORS.map((color) => {
                                     return (
-                                        <div onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color.color }}> </div>
+                                        <div className="colorCircles" onClick={() => { changeColor(color) }} style={{ border: '1 px solid black', height: '50px', width: '50px', background: color.color, }}> </div>
                                     )
                                 })
                             }
@@ -118,7 +118,7 @@ function Grow({ mushrooms, setMushrooms }) {
                 </div>
 
             </div >
-            <button style={{ marginTop: '400px' }} onClick={() => { sendToKingdom('/kingdom') }}> Send to Kingdom </button>
+            <button className='sendToKingdomBtn' onClick={() => { sendToKingdom('/adventure') }}> Send to Kingdom </button>
         </div>
 
     )
