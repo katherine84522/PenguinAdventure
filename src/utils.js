@@ -28,6 +28,12 @@ export const EXPRESSIONS = [
     },
     {
         image: "./src/assets/expressions/10.png"
+    },
+    {
+        image: "./src/assets/expressions/11.png"
+    },
+    {
+        image: "./src/assets/expressions/12.png"
     }
 ]
 
@@ -62,6 +68,12 @@ export const ITEMS = [
     },
     {
         image: "./src/assets/items/waterbottle.png"
+    },
+    {
+        image: "./src/assets/items/bomb.png"
+    },
+    {
+        image: "./src/assets/items/alcohol.png"
     }
 ]
 

@@ -80,7 +80,7 @@ function Grow({ mushrooms, setMushrooms }) {
                                 EXPRESSIONS.map((expression) => {
                                     return (
                                         <div className="child" style={{ zIndex: '100' }} >
-                                            <img src={expression.image} style={{ height: '50px' }} onClick={() => { addToFace(expression.image) }} />
+                                            <img src={expression.image} style={{ height: '60px' }} onClick={() => { addToFace(expression.image) }} />
                                         </div>
                                     );
                                 })
@@ -100,9 +100,9 @@ function Grow({ mushrooms, setMushrooms }) {
                     </div>
                     <div className="colorAndBody" >
                         <div className="bodyPartButtons">
-                            <button className="bodyPartButton" onClick={() => { setBodyPart("Cap") }}>Cap</button>
-                            <button className="bodyPartButton" onClick={() => { setBodyPart("Stem") }}>Stem</button>
-                            <button className="bodyPartButton" onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Cap" ? 'black' : 'white' }} onClick={() => { setBodyPart("Cap") }}>Cap</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Stem" ? 'black' : 'white' }} onClick={() => { setBodyPart("Stem") }}>Stem</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Limbs" ? 'black' : 'white' }} onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
                         </div>
                         <div className="colorsButtons" >
                             {

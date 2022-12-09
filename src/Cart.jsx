@@ -3,7 +3,6 @@ import CartItem from './CartItem'
 
 function Cart({ cartItems, setCartItems }) {
 
-
     const [itemQuantity, setItemQuantity] = useState(0)
 
     useEffect(() => {
@@ -21,30 +20,6 @@ function Cart({ cartItems, setCartItems }) {
         request()
     }, [])
 
-    const handleCheck = async (e, item) => {
-
-
-        const checked = e.target.checked
-
-
-        const req = await fetch(`http://localhost:3000/cartItems/${item.id}`, {
-            method: "PATCH",
-            body: JSON.stringify({
-                checked
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-
-        })
-
-
-        setItemQuantity(itemQuantity + (checked ? 1 : -1))
-
-
-        console.log(e.target.checked)
-    }
 
 
     const handleRemove = async (item) => {
@@ -68,7 +43,7 @@ function Cart({ cartItems, setCartItems }) {
                 {
                     cartItems.map((item) => {
                         return (
-                            <CartItem item={item} setItemQuantity={setItemQuantity} itemQuantity={itemQuantity} handleCheck={handleCheck} handleRemove={handleRemove} />
+                            <CartItem item={item} setItemQuantity={setItemQuantity} itemQuantity={itemQuantity} handleRemove={handleRemove} />
                         )
                     })
                 }

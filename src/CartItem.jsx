@@ -1,8 +1,38 @@
+import { useEffect, useState } from 'react'
+
+const CartItem = ({ item, handleRemove, setItemQuantity, itemQuantity }) => {
+    const [isChecked, setIsChecked] = useState(true)
+
+    const handleCheck = async (e) => {
+        const checked = e.target.checked
+        const req = await fetch(`http://localhost:3000/cartItems/${item.id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                checked
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+
+        })
+
+        setIsChecked(checked)
+        setItemQuantity(itemQuantity + (checked ? 1 : -1))
+
+    }
 
 
-const CartItem = ({ item, handleCheck, handleRemove }) => {
 
-
+    useEffect(() => {
+        const request = async () => {
+            const req = await fetch(`http://localhost:3000/cartItems/${item.id}`)
+            const res = await req.json()
+            console.log(res.checked)
+            setIsChecked(res.checked)
+        }
+        request()
+    }, [])
 
 
 
@@ -27,7 +57,7 @@ const CartItem = ({ item, handleCheck, handleRemove }) => {
                 <img src={item.limbsColor} style={{ width: "300px" }} />
             </div>
             <form onChange={(e) => { handleCheck(e, item) }}>
-                <input className='checkbox' type='checkbox' defaultChecked />
+                <input className='checkbox' type='checkbox' checked={isChecked} />
                 <label className='checkBoxLabel' >Take me home</label>
             </form>
             <button onClick={() => { handleRemove(item) }} className='removeBtn'>Release me</button>

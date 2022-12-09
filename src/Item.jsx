@@ -23,9 +23,9 @@ const Item = ({ item, leftItem, rightItem, setRightItem, setLeftItem }) => {
 
             {
                 showOptions ?
-                    (<div style={{ height: '10px', width: 'auto', position: 'absolute', zIndex: '300' }}>
-                        <button onClick={() => { addToRightHand(item) }}>Right Hand</button>
-                        <button onClick={() => { addToLeftHand(item) }}>Left Hand</button>
+                    (<div style={{ zIndex: '300', paddingBottom: '10px', display: 'flex' }}>
+                        <button className='bodyPartButton' onClick={() => { addToRightHand(item) }}>Right Hand</button>
+                        <button className='bodyPartButton' onClick={() => { addToLeftHand(item) }}>Left Hand</button>
                     </div>)
                     : null
             }

@@ -13,6 +13,7 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
 
 
 
+
     const downloadImg = () => {
         const kingdom = document.getElementById('kingdom')
         html2canvas(kingdom).then((canvas) => {
@@ -49,8 +50,7 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
                 stemColor: mushroom.stemColor,
                 limbsColor: mushroom.limbsColor,
                 rightItem: mushroom.rightItem,
-                leftItem: mushroom.leftItem,
-                checked: true,
+                leftItem: mushroom.leftItem
             }),
             headers: {
                 'Accept': 'application/json',
@@ -71,11 +71,11 @@ function Kingdom({ mushrooms, setMushrooms, cartItems, setCartItems }) {
         <div>
             <h1 className="adventureHeader">Welcome to {welcomeMsg}!</h1>
             <div style={{ display: 'flex', gap: '1em', justifyContent: 'center' }}>
-                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/kingdomImg.jpg'); setWelcomeMsg("Mushroom Kingdom") }}>Mushroom Kingdom</button>
-                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/northpole.jpg'); setWelcomeMsg("the North Pole") }}>North Pole</button>
-                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/mountrushmore.jpg'); setWelcomeMsg("Mount Rushmore") }}>Mount Rushmore</button>
-                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/moon.jpg'); setWelcomeMsg("the Moon") }}>The Moon</button>
-                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/hawaii.jpg'); setWelcomeMsg("Hawaii") }}>Hawaii</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/kingdomImg.jpg'); setWelcomeMsg("Mushroom Kingdom") }} style={{ color: welcomeMsg === "Mushroom Kingdom" ? 'black' : 'white' }}>Mushroom Kingdom</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/northpole.jpg'); setWelcomeMsg("the North Pole") }} style={{ color: welcomeMsg === "the North Pole" ? 'black' : 'white' }}>North Pole</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/mountrushmore.jpg'); setWelcomeMsg("Mount Rushmore") }} style={{ color: welcomeMsg === "Mount Rushmore" ? 'black' : 'white' }}>Mount Rushmore</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/moon.jpg'); setWelcomeMsg("the Moon") }} style={{ color: welcomeMsg === "the Moon" ? 'black' : 'white' }}>The Moon</button>
+                <button className="locationButton" onClick={() => { setBackgroundImg('./src/assets/hawaii.jpg'); setWelcomeMsg("Hawaii") }} style={{ color: welcomeMsg === "Hawaii" ? 'black' : 'white' }}>Hawaii</button>
             </div>
             <div id='kingdom' className='adventurePhoto'>
                 <div style={{ display: 'flex' }}>

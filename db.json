@@ -10,45 +10,25 @@
       "id": 3
     },
     {
-      "expression": "./src/assets/expressions/3.png",
+      "expression": "./src/assets/expressions/8.png",
       "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/fec89a.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/577563.png",
-      "rightItem": "./src/assets/items/flowers.png",
-      "leftItem": "./src/assets/items/laptop.png",
-      "id": 4
+      "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
+      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
+      "rightItem": "",
+      "leftItem": "",
+      "id": 6
     }
   ],
   "cartItems": [
     {
-      "expression": "./src/assets/expressions/2.png",
+      "expression": "./src/assets/expressions/1.png",
       "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
       "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
       "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
-      "rightItem": "./src/assets/items/flowers.png",
-      "leftItem": "./src/assets/items/gun.png",
-      "checked": true,
-      "id": 6
-    },
-    {
-      "expression": "./src/assets/expressions/2.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
-      "rightItem": "./src/assets/items/flowers.png",
-      "leftItem": "./src/assets/items/gun.png",
-      "checked": true,
-      "id": 7
-    },
-    {
-      "expression": "./src/assets/expressions/2.png",
-      "capColor": "./src/assets/MushroomParts/Cap/e8e8e4.png",
-      "stemColor": "./src/assets/MushroomParts/Body/fec5bb.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/577563.png",
-      "rightItem": "./src/assets/items/laptop.png",
-      "leftItem": "./src/assets/items/hammer.png",
-      "checked": true,
-      "id": 8
+      "rightItem": "./src/assets/items/icecream.png",
+      "leftItem": "./src/assets/items/slingshot.png",
+      "id": 10,
+      "checked": true
     }
   ]
 }
