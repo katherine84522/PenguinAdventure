@@ -1,42 +1,38 @@
 {
-  "mushrooms": [
+  "penguins": [
     {
-      "expression": "./src/assets/expressions/9.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fcd5ce.png",
-      "stemColor": "./src/assets/MushroomParts/Body/577563.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/e8e8e4.png",
-      "rightItem": "./src/assets/items/balloon.png",
-      "leftItem": "./src/assets/items/waterbottle.png",
+      "headacc": "./src/assets/penguins/head-accessories/BIG/icecream-hat.png",
+      "bodyacc": "./src/assets/penguins/body-accessories/BIG/lollipop.png",
+      "headColor": "./src/assets/penguins/head-color/orange-h.png",
+      "bodyColor": "./src/assets/penguins/body-color/green-b.png",
+      "mouthColor": "./src/assets/penguins/mouth-and-feet/yellow-m.png",
+      "id": 1
+    },
+    {
+      "headacc": "./src/assets/penguins/head-accessories/BIG/frog-hat.png",
+      "bodyacc": "./src/assets/penguins/body-accessories/BIG/frog.png",
+      "headColor": "./src/assets/penguins/head-color/green-h.png",
+      "bodyColor": "./src/assets/penguins/body-color/green-b.png",
+      "mouthColor": "./src/assets/penguins/mouth-and-feet/yellow-m.png",
+      "id": 2
+    },
+    {
+      "headacc": "./src/assets/penguins/head-accessories/BIG/grass.png",
+      "bodyacc": "./src/assets/penguins/body-accessories/BIG/scarf.png",
+      "headColor": "./src/assets/penguins/head-color/green-h.png",
+      "bodyColor": "./src/assets/penguins/body-color/orange-b.png",
+      "mouthColor": "./src/assets/penguins/mouth-and-feet/orange-m.png",
       "id": 3
-    },
-    {
-      "expression": "./src/assets/expressions/8.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
-      "rightItem": "",
-      "leftItem": "",
-      "id": 6
-    },
-    {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/ffe5d9.png",
-      "stemColor": "./src/assets/MushroomParts/Body/fd7d0d.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fec89a.png",
-      "rightItem": "./src/assets/items/alcohol.png",
-      "leftItem": "./src/assets/items/icecream.png",
-      "id": 7
     }
   ],
   "cartItems": [
     {
-      "expression": "./src/assets/expressions/1.png",
-      "capColor": "./src/assets/MushroomParts/Cap/fb310e.png",
-      "stemColor": "./src/assets/MushroomParts/Body/d8e2dc.png",
-      "limbsColor": "./src/assets/MushroomParts/Limbs/fb310e.png",
-      "rightItem": "./src/assets/items/icecream.png",
-      "leftItem": "./src/assets/items/slingshot.png",
-      "id": 10,
+      "headacc": "./src/assets/penguins/head-accessories/BIG/icecream-hat.png",
+      "bodyacc": "./src/assets/penguins/body-accessories/BIG/lollipop.png",
+      "headColor": "./src/assets/penguins/head-color/orange-h.png",
+      "bodyColor": "./src/assets/penguins/body-color/green-b.png",
+      "mouthColor": "./src/assets/penguins/mouth-and-feet/yellow-m.png",
+      "id": 1,
       "checked": true
     }
   ]

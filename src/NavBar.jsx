@@ -1,21 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-// const linkStyles = {
-//     display: "inline-block",
-//     width: "50px",
-//     padding: "12px",
-//     margin: "0 6px 6px",
-//     background: "pink",
-//     textDecoration: "none",
-//     color: "white",
-// };
+
 
 function NavBar() {
     return (
         <div className='navbar'>
             <div className="headerImg">
-                <img className="logoImg" src='./src/assets/headerRED1.png' />
+                <img className="logoImg" src='./src/assets/logo-no-background.png' />
             </div>
             <div className='navButtons'>
                 <NavLink
@@ -38,7 +30,7 @@ function NavBar() {
                     // }}
                     className="btn bootstrap-killer"
                 >
-                    Grow a Mushroom
+                    Build a Penguin
                 </NavLink>
                 <NavLink
                     to="/adventure"

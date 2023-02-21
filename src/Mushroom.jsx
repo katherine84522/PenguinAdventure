@@ -1,26 +1,23 @@
 // import { EXPRESSIONS, ITEMS } from "./utils"
 
 
-const Mushroom = ({ expression, rightItem, leftItem, capColor, stemColor, limbsColor }) => {
+const Mushroom = ({ bodyacc, headacc, headColor, bodyColor, mouthColor }) => {
     return (
         <div className="mushroom" id="mushroom">
-            <div className='expression'>
-                <img src={expression} style={{ width: "150px" }} />
+            <div className='mushroomParts' style={{ zIndex: 200 }}>
+                <img src={bodyacc} style={{ width: "500px" }} />
             </div>
-            <div className='righthanditem'>
-                < img src={rightItem} style={{ height: '150px' }} />
-            </div>
-            <div className='lefthanditem'>
-                < img src={leftItem} style={{ height: '150px' }} />
+            <div className='mushroomParts' style={{ zIndex: 200 }}>
+                <img src={headacc} style={{ width: "500px" }} />
             </div>
             <div className='mushroomParts'>
-                <img src={capColor} style={{ width: "800px" }} />
+                <img src={headColor} style={{ width: "500px" }} />
             </div>
             <div className='mushroomParts'>
-                <img src={limbsColor} style={{ width: "800px" }} />
+                <img src={bodyColor} style={{ width: "500px" }} />
             </div>
             <div className='mushroomParts'>
-                <img src={stemColor} style={{ width: "800px" }} />
+                <img src={mouthColor} style={{ width: "500px" }} />
             </div>
         </div>
     )

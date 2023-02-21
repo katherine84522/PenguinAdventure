@@ -1,190 +1,118 @@
-export const EXPRESSIONS = [
+export const BODYACC = [
     {
-        image: "./src/assets/expressions/1.png"
+        image: "./src/assets/penguins/body-accessories/BIG/bowtie.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/bowtie-s.png"
     },
     {
-        image: "./src/assets/expressions/2.png"
+        image: "./src/assets/penguins/body-accessories/BIG/candy.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/candy-s.png"
     },
     {
-        image: "./src/assets/expressions/3.png"
+        image: "./src/assets/penguins/body-accessories/BIG/frog.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/frog-s.png"
     },
     {
-        image: "./src/assets/expressions/4.png"
+        image: "./src/assets/penguins/body-accessories/BIG/icecream.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/ice-cream-s.png"
     },
     {
-        image: "./src/assets/expressions/5.png"
+        image: "./src/assets/penguins/body-accessories/BIG/lollipop.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/lollipop-s.png"
     },
     {
-        image: "./src/assets/expressions/6.png"
+        image: "./src/assets/penguins/body-accessories/BIG/paint.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/paint-s.png"
     },
     {
-        image: "./src/assets/expressions/7.png"
+        image: "./src/assets/penguins/body-accessories/BIG/scarf.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/scarf-s.png"
     },
     {
-        image: "./src/assets/expressions/8.png"
+        image: "./src/assets/penguins/body-accessories/BIG/star.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/star-s.png"
     },
     {
-        image: "./src/assets/expressions/9.png"
+        image: "./src/assets/penguins/body-accessories/BIG/yellow-bag.png",
+        icon: "./src/assets/penguins/body-accessories/SMALL/yellow-bag-s.png"
+    }
+]
+export const HEADACC = [
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/artist.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/artist-s.png"
     },
     {
-        image: "./src/assets/expressions/10.png"
+        image: "./src/assets/penguins/head-accessories/BIG/bee.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/bee-s.png"
     },
     {
-        image: "./src/assets/expressions/11.png"
+        image: "./src/assets/penguins/head-accessories/BIG/bow.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/bow-s.png"
     },
     {
-        image: "./src/assets/expressions/12.png"
+        image: "./src/assets/penguins/head-accessories/BIG/frog-hat.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/frog-hat-s.png"
+    },
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/grass.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/grass-s.png"
+    },
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/icecream-hat.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/icecream-s.png"
+    },
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/pirate.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/pirate-s.png"
+    },
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/sick.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/sick-s.png"
+    },
+    {
+        image: "./src/assets/penguins/head-accessories/BIG/straw-hat.png",
+        icon: "./src/assets/penguins/head-accessories/SMALL/straw-hat-s.png"
     }
 ]
 
-
-export const ITEMS = [
-    {
-        image: "./src/assets/items/balloon.png"
-    },
-    {
-        image: "./src/assets/items/cupcake.png"
-    },
-    {
-        image: "./src/assets/items/flowers.png"
-    },
-    {
-        image: "./src/assets/items/gun.png"
-    },
-    {
-        image: "./src/assets/items/hammer.png"
-    },
-    {
-        image: "./src/assets/items/icecream.png"
-    },
-    {
-        image: "./src/assets/items/laptop.png"
-    },
-    {
-        image: "./src/assets/items/slingshot.png"
-    },
-    {
-        image: "./src/assets/items/sword.png"
-    },
-    {
-        image: "./src/assets/items/waterbottle.png"
-    },
-    {
-        image: "./src/assets/items/bomb.png"
-    },
-    {
-        image: "./src/assets/items/alcohol.png"
-    }
-]
-
-// export const cap = [
-//     {
-//         image: "./src/assets/MushroomParts/Cap/#FB310E.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Cap/#D8E2DC.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Cap/Cap3.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Cap/Cap4.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Cap/Cap5.png"
-//     }
-// ]
-// export const limbs = [
-//     {
-//         image: "./src/assets/MushroomParts/Limbs/#FB310E.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Limbs/#DBE2DC.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Limbs/Limbs4.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Limbs/Limbs5.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Limbs/Limbs6.png"
-//     }
-// ]
-// export const body = [
-//     {
-//         image: "./src/assets/MushroomParts/Body/#FB310E.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts#D8E2DC.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Body/Body3.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Body/Body4.png"
-//     },
-//     {
-//         image: "./src/assets/MushroomParts/Body/Body2.png"
-//     }
-// ]
 
 
 export const COLORS = [
 
     {
-        "color": "#e8e8e4",
-        "stem": "./src/assets/MushroomParts/Body/e8e8e4.png",
-        "cap": "./src/assets/MushroomParts/Cap/e8e8e4.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/e8e8e4.png"
+        "color": "#52B5FB",
+        "body": "./src/assets/penguins/body-color/blue-b.png",
+        "head": "./src/assets/penguins/head-color/blue-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/blue-m.png"
     },
     {
-        "color": "#ffe5d9",
-        "stem": "./src/assets/MushroomParts/Body/ffe5d9.png",
-        "cap": "./src/assets/MushroomParts/Cap/ffe5d9.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/ffe5d9.png"
+        "color": "#C1F57A",
+        "body": "./src/assets/penguins/body-color/green-b.png",
+        "head": "./src/assets/penguins/head-color/green-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/green-m.png"
     },
     {
-        "color": "#ffd7ba",
-        "stem": "./src/assets/MushroomParts/Body/ffd7ba.png",
-        "cap": "./src/assets/MushroomParts/Cap/ffd7ba.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/ffd7ba.png"
+        "color": "#F8AA29",
+        "body": "./src/assets/penguins/body-color/orange-b.png",
+        "head": "./src/assets/penguins/head-color/orange-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/orange-m.png"
     },
     {
-        "color": "#fec89a",
-        "stem": "./src/assets/MushroomParts/Body/fec89a.png",
-        "cap": "./src/assets/MushroomParts/Cap/fec89a.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/fec89a.png"
+        "color": "#FD66D2",
+        "body": "./src/assets/penguins/body-color/pink-b.png",
+        "head": "./src/assets/penguins/head-color/pink-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/pink-m.png"
     },
     {
-        "color": "#fcd5ce",
-        "stem": "./src/assets/MushroomParts/Body/fcd5ce.png",
-        "cap": "./src/assets/MushroomParts/Cap/fcd5ce.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/fcd5ce.png"
+        "color": "#B942FA",
+        "body": "./src/assets/penguins/body-color/purple-b.png",
+        "head": "./src/assets/penguins/head-color/purple-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/purple-m.png"
     },
     {
-        "color": "#fec5bb",
-        "stem": "./src/assets/MushroomParts/Body/fec5bb.png",
-        "cap": "./src/assets/MushroomParts/Cap/fec5bb.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/fec5bb.png"
-    },
-    {
-        "color": "#FB310E",
-        "stem": "./src/assets/MushroomParts/Body/fb310e.png",
-        "cap": "./src/assets/MushroomParts/Cap/fb310e.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/fb310e.png"
-    },
-    {
-        "color": "#fd7d0d",
-        "stem": "./src/assets/MushroomParts/Body/fd7d0d.png",
-        "cap": "./src/assets/MushroomParts/Cap/fd7d0d.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/fd7d0d.png"
-    },
-    {
-        "color": "#577563",
-        "stem": "./src/assets/MushroomParts/Body/577563.png",
-        "cap": "./src/assets/MushroomParts/Cap/577563.png",
-        "limbs": "./src/assets/MushroomParts/Limbs/577563.png"
+        "color": "#FADF42",
+        "body": "./src/assets/penguins/body-color/yellow-b.png",
+        "head": "./src/assets/penguins/head-color/yellow-h.png",
+        "mouth": "./src/assets/penguins/mouth-and-feet/yellow-m.png"
     }
-
 ]

@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
 
-  const [mushrooms, setMushrooms] = useState([])
+  const [penguins, setPenguins] = useState([])
   const [cartItems, setCartItems] = useState([])
 
   return (
@@ -18,8 +18,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/grow" element={<Grow mushrooms={mushrooms} setMushrooms={setMushrooms} />} />
-        <Route path="/adventure" element={<Kingdom mushrooms={mushrooms} setMushrooms={setMushrooms} cartItems={cartItems} setCartItems={setCartItems} />} />
+        <Route path="/grow" element={<Grow penguins={penguins} setPenguins={setPenguins} />} />
+        <Route path="/adventure" element={<Kingdom penguins={penguins} setPenguins={setPenguins} cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
       </Routes>
     </div>

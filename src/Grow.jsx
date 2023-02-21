@@ -1,41 +1,45 @@
 import { React, useState, } from "react";
-import { COLORS, EXPRESSIONS, ITEMS } from "./utils";
+import { COLORS, HEADACC, BODYACC } from "./utils";
 import { useNavigate } from "react-router-dom";
 import Mushroom from './Mushroom'
-import Item from './Item'
 // import html2canvas from "html2canvas"
 
 
-function Grow({ mushrooms, setMushrooms }) {
+function Grow({ penguins, setPenguins }) {
 
-    const [expression, setExpression] = useState("./src/assets/expressions/1.png")
-    const [rightItem, setRightItem] = useState("")
-    const [leftItem, setLeftItem] = useState("")
+    const [headacc, setHeadAcc] = useState("")
+    const [bodyacc, setBodyAcc] = useState("")
     const [bodyPart, setBodyPart] = useState("")
-    const [capColor, setCapColor] = useState("./src/assets/MushroomParts/Cap/fb310e.png")
-    const [stemColor, setStemColor] = useState("./src/assets/MushroomParts/Body/d8e2dc.png")
-    const [limbsColor, setLimbsColor] = useState("./src/assets/MushroomParts/Limbs/fb310e.png")
+    const [headColor, setHeadColor] = useState("./src/assets/penguins/head-color/orange-h.png")
+    const [bodyColor, setBodyColor] = useState("./src/assets/penguins/body-color/blue-b.png")
+    const [mouthColor, setMouthColor] = useState("./src/assets/penguins/mouth-and-feet/yellow-m.png")
 
 
 
     const addToFace = (image) => {
-        setExpression(image)
-        console.log(expression)
+        setHeadAcc(image)
+        console.log(headacc)
+
+    }
+
+    const addToBody = (image) => {
+        setBodyAcc(image)
+        console.log(bodyacc)
 
     }
 
     const changeColor = (color) => {
 
 
-        if (bodyPart === "Cap") {
-            setCapColor(color.cap)
-            console.log(capColor)
+        if (bodyPart === "Head") {
+            setHeadColor(color.head)
+            console.log(headColor)
         };
-        if (bodyPart === "Stem") {
-            setStemColor(color.stem)
+        if (bodyPart === "Body") {
+            setBodyColor(color.body)
         };
-        if (bodyPart === "Limbs") {
-            setLimbsColor(color.limbs)
+        if (bodyPart === "Mouth") {
+            setMouthColor(color.mouth)
         };
 
 
@@ -47,15 +51,14 @@ function Grow({ mushrooms, setMushrooms }) {
     const sendToKingdom = () => {
 
         const request = async () => {
-            const req = await fetch("http://localhost:3000/mushrooms", {
+            const req = await fetch("http://localhost:3000/penguins", {
                 method: 'POST',
                 body: JSON.stringify({
-                    expression,
-                    capColor,
-                    stemColor,
-                    limbsColor,
-                    rightItem,
-                    leftItem
+                    headacc,
+                    bodyacc,
+                    headColor,
+                    bodyColor,
+                    mouthColor
                 }),
                 headers: {
                     'Accept': 'application/json',
@@ -63,7 +66,7 @@ function Grow({ mushrooms, setMushrooms }) {
                 }
             })
             const res = await req.json()
-            setMushrooms([...mushrooms, res])
+            setPenguins([...penguins, res])
         }
 
         request()
@@ -77,10 +80,10 @@ function Grow({ mushrooms, setMushrooms }) {
                     <div>
                         <div className="parent">
                             {
-                                EXPRESSIONS.map((expression) => {
+                                HEADACC.map((acc) => {
                                     return (
                                         <div className="child" style={{ zIndex: '100' }} >
-                                            <img src={expression.image} style={{ height: '60px' }} onClick={() => { addToFace(expression.image) }} />
+                                            <img src={acc.icon} style={{ height: '60px' }} onClick={() => { addToFace(acc.image) }} />
                                         </div>
                                     );
                                 })
@@ -88,10 +91,12 @@ function Grow({ mushrooms, setMushrooms }) {
                         </div>
                         <div className="parent" style={{ marginTop: '50px' }}>
                             {
-                                ITEMS.map((item) => {
+                                BODYACC.map((acc) => {
                                     return (
                                         <div className="child">
-                                            <Item item={item} rightItem={rightItem} setRightItem={setRightItem} setLeftItem={setLeftItem} leftItem={leftItem} />
+                                            <div style={{ display: 'flex', marginLeft: '10px' }}>
+                                                <img src={acc.icon} style={{ width: '40px', height: '40px', zIndex: '220' }} onClick={() => { addToBody(acc.image) }} />
+                                            </div>
                                         </div>
                                     )
                                 })
@@ -100,9 +105,9 @@ function Grow({ mushrooms, setMushrooms }) {
                     </div>
                     <div className="colorAndBody" >
                         <div className="bodyPartButtons">
-                            <button className="bodyPartButton" style={{ color: bodyPart === "Cap" ? 'black' : 'white' }} onClick={() => { setBodyPart("Cap") }}>Cap</button>
-                            <button className="bodyPartButton" style={{ color: bodyPart === "Stem" ? 'black' : 'white' }} onClick={() => { setBodyPart("Stem") }}>Stem</button>
-                            <button className="bodyPartButton" style={{ color: bodyPart === "Limbs" ? 'black' : 'white' }} onClick={() => { setBodyPart("Limbs") }}>Limbs</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Head" ? 'black' : 'white' }} onClick={() => { setBodyPart("Head") }}>Head</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Body" ? 'black' : 'white' }} onClick={() => { setBodyPart("Body") }}>Body</button>
+                            <button className="bodyPartButton" style={{ color: bodyPart === "Mouth" ? 'black' : 'white' }} onClick={() => { setBodyPart("Mouth") }}>Mouth</button>
                         </div>
                         <div className="colorsButtons" >
                             {
@@ -114,11 +119,15 @@ function Grow({ mushrooms, setMushrooms }) {
                             }
                         </div>
                     </div>
-                    <Mushroom expression={expression} rightItem={rightItem} leftItem={leftItem} capColor={capColor} stemColor={stemColor} limbsColor={limbsColor} />
                 </div>
-
+                <div style={{ marginTop: '-10vh', marginLeft: '10vw' }}>
+                    <Mushroom bodyacc={bodyacc} headacc={headacc} headColor={headColor} bodyColor={bodyColor} mouthColor={mouthColor} />
+                </div>
+                <div style={{ marginTop: '70vh', marginLeft: '30vw' }}>
+                    <button className='sendToKingdomBtn' onClick={() => { sendToKingdom('/adventure') }}> Send to Kingdom </button>
+                </div>
             </div >
-            <button className='sendToKingdomBtn' onClick={() => { sendToKingdom('/adventure') }}> Send to Kingdom </button>
+
         </div>
 
     )

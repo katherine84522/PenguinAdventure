@@ -51,7 +51,7 @@ function Cart({ cartItems, setCartItems }) {
             </div>
             <div className="checkOutContainer">
                 <h3 className='checkOutText' >Subtotal</h3>
-                <h4 className='checkOutText'>{itemQuantity} Mushroom{itemQuantity > 1 ? "s" : null}</h4>
+                <h4 className='checkOutText'>{itemQuantity} Penguin{itemQuantity > 1 ? "s" : null}</h4>
                 <h3 className='checkOutText'>$ {itemQuantity * 17500} USD</h3>
                 <button className="checkoutBtn" onClick={() => { alert('You just got scammed!') }}>Continue to Checkout</button>
             </div>

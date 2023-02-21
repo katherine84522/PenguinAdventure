@@ -38,23 +38,20 @@ const CartItem = ({ item, handleRemove, setItemQuantity, itemQuantity }) => {
 
     return (
         <div className="cartItem">
-            <div className="cartRightItem">
-                <img src={item.rightItem} style={{ height: "70px" }} />
+            <div className="cartMushroom" style={{ zIndex: 200 }}>
+                <img src={item.bodyacc} style={{ width: "200px" }} />
             </div>
-            <div className="cartLeftItem">
-                <img src={item.leftItem} style={{ height: "70px" }} />
-            </div>
-            <div className='cartExpression'>
-                <img src={item.expression} style={{ width: "50px" }} />
+            <div className='cartMushroom' style={{ zIndex: 200 }}>
+                <img src={item.headacc} style={{ width: "200px" }} />
             </div>
             <div className='cartMushroom'>
-                <img src={item.capColor} style={{ width: "300px" }} />
+                <img src={item.headColor} style={{ width: "200px" }} />
             </div>
             <div className='cartMushroom'>
-                <img src={item.stemColor} style={{ width: "300px" }} />
+                <img src={item.bodyColor} style={{ width: "200px" }} />
             </div>
             <div className='cartMushroom'>
-                <img src={item.limbsColor} style={{ width: "300px" }} />
+                <img src={item.mouthColor} style={{ width: "200px" }} />
             </div>
             <form onChange={(e) => { handleCheck(e, item) }}>
                 <input className='checkbox' type='checkbox' checked={isChecked} />

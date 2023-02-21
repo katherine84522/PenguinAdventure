@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import DragMove from "./DragMove";
 
-const CreatedMushroom = ({ mushroom }) => {
+const CreatedMushroom = ({ penguin }) => {
 
 
     const [translate, setTranslate] = useState({
@@ -20,23 +20,20 @@ const CreatedMushroom = ({ mushroom }) => {
     return (
         <DragMove onDragMove={handleDragMove}>
             <div style={{ marginLeft: "200px", transform: `translateX(${translate.x}px) translateY(${translate.y}px)` }}>
-                <div className="mushroomRightItem">
-                    <img src={mushroom.rightItem} style={{ height: "70px" }} />
+                <div className="createdMushroom" style={{ zIndex: 100 }}>
+                    <img src={penguin.headacc} style={{ width: "300px" }} />
                 </div>
-                <div className="mushroomLeftItem">
-                    <img src={mushroom.leftItem} style={{ height: "70px" }} />
-                </div>
-                <div className='mushroomExpression'>
-                    <img src={mushroom.expression} style={{ width: "50px" }} />
+                <div className="createdMushroom" style={{ zIndex: 100 }}>
+                    <img src={penguin.bodyacc} style={{ width: "300px" }} />
                 </div>
                 <div className='createdMushroom'>
-                    <img src={mushroom.capColor} style={{ width: "300px" }} />
+                    <img src={penguin.headColor} style={{ width: "300px" }} />
                 </div>
                 <div className='createdMushroom'>
-                    <img src={mushroom.stemColor} style={{ width: "300px" }} />
+                    <img src={penguin.bodyColor} style={{ width: "300px" }} />
                 </div>
                 <div className='createdMushroom'>
-                    <img src={mushroom.limbsColor} style={{ width: "300px" }} />
+                    <img src={penguin.mouthColor} style={{ width: "300px" }} />
                 </div>
 
             </div>
